@@ -1,0 +1,255 @@
+    @import url('https://fonts.googleapis.com/css?family=Lobster');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Lobster', cursive;
+      background-image: url('../Used-images/cup-cake-fondo.png');
+      background-repeat: repeat-y;
+      background-size: 100%;
+      background-attachment: fixed;
+      }
+
+    header {
+      width: 100%;
+      height: 50px;
+      background: #FF0033;
+      color: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      }
+
+    .principal {
+      width: 100%;
+      margin: auto;
+      }
+
+    h1 {
+      float: left;
+      font-size: 40px;
+      }
+    header .principal {
+      display: table;
+      }
+
+    section{
+      width: 100%;
+      margin-bottom: 25px;
+      }
+    /*Menu*/
+
+    #menu-barra {
+      display: none;
+      }
+
+    header label {
+      float: right;
+      font-size: 28px;
+      margin: 6px 0;
+      cursor: pointer;
+      }
+
+    .menu {
+      position: absolute;
+      top:50px;
+      left:0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(255, 105, 152, 0.5);
+      transition: all 0.5s;
+      transform: translateX(100%);
+      }
+    .menu a {
+      display: block;
+      color: white;
+      height: 50px;
+      text-decoration: none;
+      padding: 15px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+      }
+
+    .menu a:hover{
+      background: rgba(255, 255, 255, 0.5);
+      }
+
+    #menu-barra:checked ~ .menu {
+      transform: translateX(0%);
+      }
+
+      #banner {
+      margin-top: 50px;
+      position: relative;
+      }
+
+    #banner .principal{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      color: #ffffff;
+      }
+
+    #banner h2{
+      font-size: 40px;
+      text-align: center;
+      }
+
+    .title:before{
+      content: '';
+      position: absolute;
+      top: -5px;
+      left: 270px;
+      width: 60px;
+      height: 60px;
+      background: url('../Used-images/cupCake.png');
+      background-position: center;
+      background-size: cover;
+      }
+    .slider {
+      width: 95%;
+      margin: auto;
+      overflow: hidden;
+      }
+    .slider ul {
+      display: flex;
+      padding: 0;
+      width: 300%;
+
+      animation: change 15s infinite alternate linear;
+      }
+    .slider li {
+      width: 100%;
+      list-style: none;
+      }
+    .slider img {
+      width: 100%;
+      height: 90%;
+      }
+    @keyframes change {
+      0% {margin-left: 0;}
+      20% {margin-left: 0;}
+
+      40% {margin-left: -100%;}
+      60% {margin-left: -100%;}
+
+      80% {margin-left: -200%;}
+      100% {margin-left: -200%;}
+      }
+    .social {
+      position: fixed;
+      left: 0;
+      top: 200px;
+      z-index: 2000;
+      }
+
+	.social ul {
+      list-style: none;
+      }
+
+	.social ul li a {
+		display: inline-block;
+		color:#fff;
+		background: #000;
+		padding: 10px 15px;
+		text-decoration: none;
+		-webkit-transition:all 500ms ease;
+		-o-transition:all 500ms ease;
+		transition:all 500ms ease;
+        }
+
+	.social ul li .icon-facebook2 {background:#3b5998;} 
+	.social ul li .icon-google-plus2 {background: #d95232;}
+	.social ul li .icon-mail4 {background: #666666;}
+
+	.social ul li a:hover {
+		background: #000;
+		padding: 10px 30px;
+        }
+    @media (min-width:1024px){
+      #menu-barra{
+        display: none;
+        }
+      .icon-menu{
+        display: none;
+        }
+      .menu{
+        transform: translateX(0%);
+        top: 0;
+        position: relative;
+        width: 100%;
+        height: 10vh;
+        background: none;
+        transition: none;
+        }
+      .menu a {
+        float: right;
+        display: flex;
+        height: 50px;
+        text-decoration: none;
+        padding: 0;
+        padding-top: 5px;
+        border-bottom: none;
+        margin-right: 0;
+        font-size: 27px;
+        width: 15%;
+        padding-right: -10px;
+        }
+      .menu a:hover {
+        background: rgba(255, 255, 255, 0.5);
+        }
+    }
+    .contact {
+      text-align: center;
+      border: 1px solid #CED5D7;
+      border-radius: 6px;
+      padding: 45px 45px 20px;
+      box-shadow: 0px 5px 10px #B5C1C5, 0 0 0 10px #EEF5F7 inset;
+      }
+    .contact h3 {
+      font-size: 34px;
+      }
+    .contact label {
+      display: block; /* esto es para que el label se sobreponga a la caja de texto */
+      font-weight: bold;
+      }
+    .contact div {
+      margin-bottom: 15px;
+      }
+    .contact input [type="text"], .contact textarea {
+      padding: 7px 6px;
+      width: 294px; /* una longitud definida */
+      border: 1px solid #CED5D7;
+      resize: none; /* esta propiedad es para que el textarea no sea redimensionable */
+      box-shadow:0 0 0 3px #EEF5F7;
+      margin: 5px 0;
+      }
+    .contact input[type="text"]:focus, .contact textarea:focus {
+      outline: none; /* reset especifico para Chrome/Safari */
+      box-shadow:0 0 0 3px #dde9ec;
+      }
+    .contact input[type="submit"]{
+      cursor: pointer;
+      border: 1px solid #CED5D7;
+      box-shadow:0 0 0 3px #EEF5F7;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: bold;
+      text-shadow: 1px 1px 0px white;
+      background: #e4f1f6; /* fallback para navegadores que no soporten degradados */
+      background: -moz-linear-gradient(top, #e4f1f6 0%, #cfe6ef 100%);
+      background: -webkit-linear-gradient(top, #e4f1f6 0%,#cfe6ef 100%);
+      }
+    .contact input[type="submit"]:hover{
+      background: #edfcff;
+      background: -moz-linear-gradient(top, #edfcff 0%, #cfe6ef 100%);
+      background: -webkit-linear-gradient(top, #edfcff 0%,#cfe6ef 100%);
+      }
+    .contact input[type="submit"]:active{
+      background: #cfe6ef;
+      background: -moz-linear-gradient(top, #cfe6ef 0%, #edfcff 100%);
+      background: -webkit-linear-gradient(top, #cfe6ef 0%,#edfcff 100%);
+      }

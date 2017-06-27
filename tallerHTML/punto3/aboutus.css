@@ -1,0 +1,173 @@
+    @import url('https://fonts.googleapis.com/css?family=Lobster');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      }
+    body {
+      font-family: 'Lobster', cursive;
+      background-image: url('../Used-images/cup-cake-fondo.png');
+      background-repeat: repeat-y;
+      background-size: 100%;
+      background-attachment: fixed;
+      }
+
+    header {
+      width: 100%;
+      height: 50px;
+      background: #FF0033;
+      color: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      }
+
+    .principal {
+      width: 100%;
+      margin: auto;
+      }
+
+    h1 {
+      float: left;
+      font-size: 40px;
+      }
+    header .principal {
+      display: table;
+      }
+
+    section{
+      width: 100%;
+      margin-bottom: 25px;
+      }
+    /*Menu*/
+
+    #menu-barra {
+      display: none;
+      }
+
+    header label {
+      float: right;
+      font-size: 28px;
+      margin: 6px 0;
+      cursor: pointer;
+      }
+
+    .menu {
+      position: absolute;
+      top:50px;
+      left:0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(255, 105, 152, 0.5);
+      transition: all 0.5s;
+      transform: translateX(100%);
+      }
+    .menu a {
+      display: block;
+      color: white;
+      height: 50px;
+      text-decoration: none;
+      padding: 15px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+      }
+
+    .menu a:hover{
+      background: rgba(255, 255, 255, 0.5);
+      }
+
+    #menu-barra:checked ~ .menu {
+      transform: translateX(0%);
+      }
+
+      #banner {
+      margin-top: 50px;
+      position: relative;
+      }
+
+    #banner .principal{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      color: #ffffff;
+      }
+
+    #banner h2{
+      font-size: 40px;
+      text-align: center;
+      }
+
+    .title:before{
+      content: '';
+      position: absolute;
+      top: -5px;
+      left: 270px;
+      width: 60px;
+      height: 60px;
+      background: url('../Used-images/cupCake.png');
+      background-position: center;
+      background-size: cover;
+      }
+    @media (min-width:1024px){
+      #menu-barra{
+        display: none;
+        }
+      .icon-menu{
+        display: none;
+        }
+      .menu{
+        transform: translateX(0%);
+        top: 0;
+        position: relative;
+        width: 100%;
+        height: 10vh;
+        background: none;
+        transition: none;
+        }
+      .menu a {
+        float: right;
+        display: flex;
+        height: 50px;
+        text-decoration: none;
+        padding: 0;
+        padding-top: 5px;
+        border-bottom: none;
+        margin-right: 0;
+        font-size: 27px;
+        width: 15%;
+        padding-right: -10px;
+        }
+      .menu a:hover {
+        background: rgba(255, 255, 255, 0.5);
+        }
+    }
+    .aboutus {
+      width: 95%;
+      margin: auto;
+      }
+    .aboutus img {
+      width: 100%;
+      height: 90%;
+      }
+
+    @media (max-width:670px) {
+      .aboutus img {
+        width: 0;
+        }
+    }
+
+    .aboutus-circles li{
+      width: 80%;
+      margin: 0 auto;
+      list-style: none;
+      }
+    .aboutus-circles img {
+      width: 100%;
+      height: 100%;
+      }
+    @media (min-width:671px) {
+      .aboutus-circles img {
+        width: 0;
+        }
+    }
